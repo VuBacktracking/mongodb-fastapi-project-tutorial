@@ -3,7 +3,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 class UserAddress(BaseModel):
-    _id: str = Field(default_factory=uuid.uuid4, alias="id")
+    id: str = Field(default_factory=uuid.uuid4, alias="_id")
     addr_name: str
     user_id: str
     street: str
@@ -13,7 +13,7 @@ class UserAddress(BaseModel):
     code: str
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "addr_name": "House",
                 "user_id": "4815162342",

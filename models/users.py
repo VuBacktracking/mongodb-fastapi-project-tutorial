@@ -1,17 +1,15 @@
 import uuid
-from pydantic import BaseModel, Field, SecretStr
-from pydantic.networks import EmailStr
-
+from pydantic import BaseModel, Field, SecretStr, EmailStr
 
 class User(BaseModel):
-    _id: str = Field(default_factory=uuid.uuid4, alias="_id")
-    name: str 
-    email: EmailStr = Field(unique=True, index=True)
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()), alias="_id")
+    name: str
+    email: EmailStr = Field(...)
     password: SecretStr
 
     class Config:
-        allow_population_by_field_name = True
-        schema_extra = {
+        populate_by_name = True
+        json_schema_extra = {
             "example": {
                 "name": "VuPhan",
                 "email": "VuPhan@gmail.com",
