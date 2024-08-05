@@ -9,7 +9,7 @@ from typing import List
 from models.users import User
 import rules.users as users
 
-router = APIRouter(prefix="/user",
+router = APIRouter(prefix="/users",
     tags=["Users"])
 
 @router.post("/", response_description="Create a new user", status_code=status.HTTP_201_CREATED, response_model=User)
