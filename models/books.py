@@ -31,7 +31,7 @@ class Books(BaseModel):
             }
         }
 
-class updateBooks(BaseModel):
+class UpdateBooks(BaseModel):
     title: Optional[str] 
     description: Optional[str]
     price: Optional[float]
