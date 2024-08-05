@@ -66,7 +66,7 @@ cd mongodb-fastapi-project-tutorial
 
 2. Run the API with uvicorn
 ```
-uvicorn main:app --reload
+uvicorn app:app --reload
 ```
 
 ## Demo
