@@ -31,7 +31,6 @@ DB_NAME =
 ```
 ├── /mongodb-fastapi-project-tutorial
 │   │── .env
-|   ├── __init__.py
 │   ├── rules
 │   │      ├── __init__.py
 │   │      ├── books.py
@@ -64,11 +63,12 @@ git clone https://github.com/VuBacktracking/mongodb-fastapi-project-tutorial.git
 cd mongodb-fastapi-project-tutorial
 ```
 
-2. Run the API with uvicorn
+2. Run the API with `uvicorn`
 ```
 uvicorn app:app --reload
 ```
 
+3. Access the FastAPI via port `localhost:8000/docs`
 ## Demo
 <p align = "center">
     <img src="assets/docs.png" alt="workflow">
